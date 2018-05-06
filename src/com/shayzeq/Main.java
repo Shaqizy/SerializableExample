@@ -9,7 +9,10 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        Company c = new Company();
+
         Person p = new Person("Игорь", "Фролов", 22);
+        p.setCompany(c);
 
         ObjectOutputStream dos = new ObjectOutputStream(new FileOutputStream("data.ser"));
         p.getList().add(new Ticket("12","sdsd"));

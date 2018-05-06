@@ -9,6 +9,7 @@ public class Person implements Serializable{
     private String name;
     private String surname;
     private int age;
+    transient private Company company;
 
     List<Ticket> list = new ArrayList<>();
 
@@ -46,6 +47,14 @@ public class Person implements Serializable{
         return list;
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -75,4 +84,8 @@ class Ticket implements Serializable{
                 ", title='" + title + '\'' +
                 '}';
     }
+}
+
+class Company{
+
 }
