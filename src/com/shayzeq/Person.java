@@ -1,10 +1,16 @@
 package com.shayzeq;
 
-public class Person {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Person implements Serializable{
 
     private String name;
     private String surname;
     private int age;
+
+    List<Ticket> list = new ArrayList<>();
 
     public Person(String name, String surname, int age) {
         this.name = name;
@@ -34,5 +40,21 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public List<Ticket> getList() {
+        return list;
+    }
+}
+
+class Ticket implements Serializable{
+
+    String id;
+
+    String title;
+
+    public Ticket(String id, String title) {
+        this.id = id;
+        this.title = title;
     }
 }
