@@ -45,6 +45,16 @@ public class Person implements Serializable{
     public List<Ticket> getList() {
         return list;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", list=" + list +
+                '}';
+    }
 }
 
 class Ticket implements Serializable{
@@ -56,5 +66,13 @@ class Ticket implements Serializable{
     public Ticket(String id, String title) {
         this.id = id;
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
